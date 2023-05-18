@@ -1,0 +1,251 @@
+header {
+  width: 100%;
+  height: 74px;
+  background: $header_BG;
+
+  .center {
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .mainArea {
+      width: auto;
+      min-width: 565px;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .logo {
+        width: auto;
+        height: 100%;
+        padding: 0 17px;
+      }
+
+      nav {
+        ul {
+          width: auto;
+          height: auto;
+          display: flex;
+
+          li {
+            width: auto;
+            height: auto;
+            padding: 28px 13px;
+            box-sizing: border-box;
+            position: relative;
+
+            a {
+              color: $header_font;
+              font-size: 18px;
+              font-weight: bold;
+              text-decoration: none;
+            }
+
+            &:hover,
+            &:active,
+            &.active {
+
+                background: #363636;
+        
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background: $nav_BG_border;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                  }
+            
+                a {
+                    color: $nav_font_HOV;
+                }
+            }
+          }
+        }
+      }
+
+      &.login {
+      min-width: 859px;
+      }
+    }
+
+    .unlogArea {
+      width: auto;
+      height: 100%;
+      display: flex;
+      padding: 0 0 0 17px ;
+      margin: 10px 0;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 1px;
+        height: 74px;
+        background: $logArea_border;
+        position: absolute;
+        top: -10px;
+        left: 0;
+      }
+
+      label {
+        width: auto;
+        height: 100%;
+        position: relative;
+
+        input {
+          width: 125px;
+          height: 28px;
+          border-radius: 5px;
+          border: none;
+          padding: 6px;
+          margin: 0 4px 10px 0;
+
+          &::placeholder {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .forgotPW {
+          color: $header_remind;
+          cursor: pointer;
+        }
+
+        .signupHint {
+          color: $header_font;
+          position: absolute;
+          bottom: -16px;
+          right: 36px;
+        }
+      }
+
+      .btnBox {
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .signIN {
+          @include loginBtn;
+          padding: 2px 10px;
+          box-sizing: border-box;
+        }
+
+        .signUp {
+          @include signupBtn;
+          width: 80px;
+          height: 25px;
+          white-space: nowrap;
+          position: absolute;
+          bottom: -31px;
+          right: 0;
+        }
+      }
+    }
+
+    .logInArea {
+      width: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0 17px ;
+      margin: 15px 0;
+      position: relative;
+
+      .topLine {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin: 0 0 11px;
+
+        .memberId {
+          color: $header_font;
+          font-size: 18px;
+          margin: 0 9px 0 0;
+        }
+
+        .logout {
+          width: 54px;
+          height: 21px;
+          background: none;
+          color: $header_font2;
+          border-left: 1px solid $logArea_border;
+
+             &:hover,&:active,&.active {
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 30%);
+          }
+        }
+      }
+
+      .bottom {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+
+        .money {
+          color: $header_font;
+          font-size: 18px;
+          margin: 0 12px 0 0;
+
+          span {
+            color: $header_remind;
+            margin: 0 0 0 5px;
+          }
+        }
+      }
+      
+      .logInLine {
+        width: 18px;
+        height: 16px;
+        margin: 0 20px 0 0;
+        cursor: pointer;
+
+        &.message {
+          background-position-x: 0%;
+          margin: 0 14px 0 0;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: $message_remind;
+            border-radius: 3px;
+            position: absolute;
+            top: -3px;
+            right: -7px;
+          }
+        }
+
+        &.member {
+          background-position-x: 50%;
+        }
+
+        &.wallet {
+          background-position-x: 100%;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 1px;
+        height: 74px;
+        background: $logArea_border;
+        position: absolute;
+        top: -10px;
+        left: 0;
+      }
+    }
+  }
+}

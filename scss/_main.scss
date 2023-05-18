@@ -1,0 +1,29 @@
+html {
+    width: 100%;
+    height: auto;
+    
+    body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        @import "./header";
+        @import "./ad";
+        @import "./mainWrap";
+        @import "./aside";
+        @import "./footer";
+        @import "./jumpWindow";
+
+        main {
+            width: 100%;
+            height: 100%;
+
+            .center {
+                width: 1200px;
+                height: auto;
+                padding: 0 0 40px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

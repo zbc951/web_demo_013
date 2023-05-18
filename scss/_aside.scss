@@ -1,0 +1,60 @@
+aside {
+    .rightBtn {
+        width: 60px;
+        height: 140px;
+        background: $asideBtn_BG;
+        border-radius: 20px 0 0 20px;
+        box-shadow: 7px 1px 18px 4px rgb(0 0 0 / 30%);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 329px;
+        right: 0;
+        z-index: 50;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: $aside_Border;
+            position: absolute;
+            top: 70px;
+            right: 0;
+        }
+
+        button {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            background: none;
+
+            i {
+                width: 32px;
+                height: 64px;
+                margin: auto;
+
+                &.cs {
+                    background-position-x: 0%;
+                }
+
+                &.app {
+                    background-position-x: 103%;
+                }
+            }
+
+            &:hover,&:active,&.active {
+                background: $asideBtn_HOV_BG;
+                &.cs {
+                    border-radius: 20px 0 0 0;
+                }
+                &.app {
+                    border-radius: 0 0 0 20px;
+                }
+
+                i {
+                    filter: drop-shadow(5px -5px 5px rgba(255, 255, 255, 0.4));
+                }
+            }
+        }
+    }
+}

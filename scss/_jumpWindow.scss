@@ -1,0 +1,413 @@
+.filter {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: $filter;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    justify-content: center;
+
+    &.display {
+        display: flex;
+    }
+
+    .jumpWindow {
+        width: auto;
+        height: auto;
+        background: $jumpWindow_BG;
+        border-radius: 16px;
+        position: relative;
+
+        //尚未登入
+        &.unLogIn {
+            display: none;
+            width: 367px;
+            height: 129px;
+            padding: 0 18px;
+
+            &.display {
+                display: block;
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 20px 0;
+
+                .top {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 0 16px;
+                    position: relative;
+
+                    .unloginIc {
+                        width: 32px;
+                        height: 32px;
+                        margin: 0 10px 0 0;
+                    }
+
+                    &::before {
+                        content: "";
+                        width: 367px;
+                        height: 2px;
+                        background: $jumpWindow_Border;
+                        position: absolute;
+                        bottom: 0;
+                        left: -18px;
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 16px 0 0;
+
+                    span {
+                        color: $jumpWindow_HintText;
+                        font-size: 14px;
+                        margin: 0 10px 0 0;
+                    }
+
+                    button {
+                        @include jumpWindowBtn;
+
+                        &.signUp {
+                            background: $jumpWindow_signUp_Btn;
+                        }
+
+                        &.logIn {
+                            background: $jumpWindow_logIn_Btn;
+                        }
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        //註冊會員
+        &.signUP {
+            display: none;
+            width: 702px;
+            height: auto;
+            border: 1px solid $jumpWindow_outBorder;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                width: 100%;
+                height: 43px;
+                background: $jumpWindow_titBG;
+            }
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 0;
+
+                form {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        width: 1px;
+                        height: 100%;
+                        background: $jumpWindow_formBorder;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                    }
+
+                    .line {
+                        width: 100%;
+                        height: 59px;
+                        display: flex;
+                        border-bottom: 1px solid $jumpWindow_formBorder;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 35px;
+
+                        label {
+                            width: 50%;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+                            
+                            p {
+                                width: 66px;
+                                height: auto;
+                                margin: 0 15px 0 0;
+
+                                &.right {
+                                    margin: 0 15px 0 21px;
+                                }
+                            }
+
+                            select {
+                                width: 219px;
+                                height: 34px;
+                                border-radius: 6px;
+                                padding: 0 12px;
+                                box-sizing: border-box;
+                                border: 1px solid $jumpWindow_titBG;
+                                appearance: none;
+                                position: relative;
+                            }
+
+                            input {
+                                @include jumpWindowInput;
+                            }
+
+                            .triangle {
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 7px 5px 0 5px;
+                                border-color: $jumpWindow_closeBtn_BG transparent transparent transparent;
+                                position: absolute;
+                                top: 25px;
+                                left: 45%;
+                            }
+                       
+                        }
+
+                        &.gray {
+                            background: $jumpWindow_formBG;
+                        }
+                    }
+                }
+
+                .downArea {
+                    width: 100%;
+                    height: 78px;
+                    display: flex;
+
+                    button {
+                        @include jumpWindowSignUpBtn;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        //註冊成功
+        &.applySuccess {
+            display: none;
+            width: 267px;
+            height: 167px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &.display {
+                display: flex;
+            }
+
+            .success_Ic {
+                width: 46px;
+                height: 47px;
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                margin: 11px 0 22px;
+            }
+
+            .goDeposit {
+                @include jumpWindowSignUpBtn;
+                width: 120px;
+                height: 35px;
+                font-size: 14px;
+            }
+        }
+
+        //公告
+        &.notice {
+            display: none;
+            width: 500px;
+            height: auto;
+            border: 1px solid $jumpWindow_outBorder;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                background: $jumpWindow_noticeBG;
+                display: flex;
+                justify-content: flex-start;
+                padding: 0 16px;
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 15px;
+                
+                .top {
+                    width: 100%;
+                    height: auto;
+                    margin: 0 0 6px;
+
+                    p {
+                        color: $jumpWindow_contentFont;
+                        font-size: 14px;
+                        line-height: 20px;
+                    } 
+                }
+
+                .bottom {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button {
+                        @include jumpWindowBtn;
+                        background: $jumpWindow_signUp_Btn;
+                    }
+                }
+            }
+        }
+
+        //通知詳情
+        &.showMore {
+            display: none;
+            width: 678px;
+            height: 478px;
+            border: 1px solid $jumpWindow_outBorder;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                background: $jumpWindow_noticeBG;
+                padding: 0 16px;
+
+                .back {
+                    width: 7px;
+                    height: 13px;
+                    position: absolute;
+                    top: 16px;
+                    left: 16px;
+                    cursor: pointer;
+                }
+            }
+
+            .topicArea {
+                width: 100%;
+                height: 54px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 48px 0 16px;
+                border-bottom: 1px solid $jumpWindow_formBorder;
+
+                .mainTitle {
+                    color: $jumpWindow_showMore_TitleFont;
+                    font-size: 18px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
+
+                .date {
+                    color: $jumpWindow_showMore_dateFont;
+                    font-size: 14px;
+
+                    .time {
+                        margin: 0 0 0 5px;
+                    }
+                }
+            }
+
+            .content {
+                width: 100%;
+                height: 342px;
+                padding: 20px 16px;
+                border-bottom: 1px solid $jumpWindow_formBorder;
+
+                p {
+                    color: $jumpWindow_contentFont;
+                    font-size: 14px;
+                    line-height: 20px;
+                }                 
+            }
+            .bottom {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 7px 16px;
+
+                .delete {
+                    width: auto;
+                    height: auto;
+                    background: none;
+                    color: $jumpWindow_delete_Btn;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .closeBtn {
+            width: 25px;
+            height: 25px;
+            background: $jumpWindow_closeBtn_BG;
+            border-radius: 30px;
+            color: $jumpWindow_closeBtn;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px 0 0 1px;
+            position: absolute;
+            top: -11px;
+            right: -10px;
+        }
+
+        .title {
+            width: 100%;
+            height: 43px;
+            color: $jumpWindow_titFont;
+            font-size: 16px;
+            letter-spacing: 2px;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            button {
+                background: none;
+                color: $jumpWindow_closeBtn;
+                font-size: 15px;
+                position: absolute;
+                right: 15px;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            padding: 20px 0;
+        }
+    }
+}

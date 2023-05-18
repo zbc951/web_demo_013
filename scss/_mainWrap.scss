@@ -1,0 +1,521 @@
+.mainWrap {
+  width: 100%;
+  height: auto;
+
+  .top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 58px 0 0;
+
+    //跑馬燈
+    .marquee {
+      width: 620px;
+      height: 42px;
+      background: $mq_BG;
+      border-radius: 10px;
+      display: flex;
+      box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 20%);
+
+      .mqIcon {
+        width: 22px;
+        height: 15px;
+        margin: auto 0 auto 17px;
+      }
+
+      .textBox {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        .content {
+          color: $mq_Word;
+          font-size: 18px;
+          font-weight: bold;
+          white-space: nowrap;
+          padding-left: 100%;
+          animation: marquee 5s linear 0s infinite;
+
+          @keyframes marquee {
+            0% {
+              transform: translateX(0%);
+            }
+
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        }
+      }
+    }
+
+    //按鈕區域
+    .btnArea {
+      width: auto;
+      height: auto;
+      display: flex;
+
+      button {
+        width: 132px;
+        height: 49px;
+        color: $btn_font;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 10px 0;
+        cursor: auto;
+
+        .icon {
+          width: 21px;
+          height: 22px;
+          margin: 0 5px 0 0;
+
+          &.point {
+            background-position-x: 0%;
+          }
+
+          &.deposit {
+            background-position-x: 31%;
+          }
+
+          &.transfer {
+            background-position-x: 65%;
+          }
+
+          &.discount {
+            margin: 0 10px 0 0;
+            background-position-x: 100%;
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+
+        &.login {
+          cursor: pointer;
+          &:hover,&:active,&.active {
+            filter: brightness(1.1);
+            i {
+              filter: drop-shadow(0px -2px 5px rgba(255, 255, 255, 0.4));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    //裝飾條
+    .deco {
+      width: 100%;
+      height: 151px;
+      display: flex;
+      margin: -10px 0 0;
+
+      .hotgame {
+        color: $hotgame_tit;
+        font-size: 24px;
+        font-weight: bold;
+        margin: auto 0 auto 556px;
+      }
+    }
+    .human {
+      width: 100%;
+      height: 151px;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+
+      .soccerBall {
+        width: 360px;
+        height: 84px;
+        position: absolute;
+        bottom: 1px;
+        left: 38%;
+        animation: visible 4.3s ease-in-out, fadeIn 0.2s 4.3s ease-in-out forwards;
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+         
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+
+      .group1 {
+        width: 61px;
+        height: 81px;
+        position: absolute;
+        bottom: 10px;
+        left: 0%;
+        animation: visible 3s ease-in-out, gp1 1.5s 3s ease-in-out forwards;
+
+        @keyframes gp1 {
+          0% {
+            opacity: 1;
+            left: 10%;
+          }
+          10% {
+            opacity: 1;
+            left: 15%;
+          }
+          50% {
+            opacity: 1;
+            left: 30%;
+          }
+          70% {
+            opacity: 1;
+            left: 29%;
+          }
+          90% {
+            opacity: 1;
+            left: 35%;
+          }
+          90% {
+            opacity: 1;
+            left: 34%;
+          }
+          100% {
+            opacity: 1;
+            left: 37%;
+          }
+        }
+      }
+
+      .group2 {
+        width: 99px;
+        height: 79px;
+        position: absolute;
+        bottom: 10px;
+        left: 20%;
+        animation: visible 4.3s ease-in-out, gp2 1s 4s ease-in forwards;
+
+        @keyframes gp2 {
+          0% {
+            opacity: 1;
+            left: 5%;
+          }
+          10% {
+            opacity: 1;
+            left: 15%;
+          }
+          100% {
+            opacity: 1;
+            left: 20%;
+          }
+        }
+      }
+
+      .group3 {
+        width: 83px;
+        height: 73px;
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        animation: visible 4.3s ease-in-out, gp3 0.2s 4.5s ease-OUT forwards;
+
+        @keyframes gp3 {
+          0% {
+            opacity: 1;
+            right: 5%;
+          }
+          10% {
+            opacity: 1;
+            right: 15%;
+          }
+
+          30% {
+            opacity: 1;
+            right: 28%;
+          }
+
+          40% {
+            opacity: 1;
+            right: 28%;
+          }
+
+          50% {
+            opacity: 1;
+            right: 26%;
+          }
+
+          70% {
+            opacity: 1;
+            right: 24%;
+          }
+
+          100% {
+            opacity: 1;
+            right: 23%;
+          }
+        }
+      }
+    }
+    .gameWrap {
+      width: 100%;
+      height: 191px;
+      display: flex;
+      padding: 0 0 55px;
+      margin: 20px 0 0 ;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $scrollbar_thumb;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $scrollbar_track;
+        border-radius: 10px;
+    }
+      .leftArea {
+        width: 48%;
+        height: 190px;
+        margin: 0 43px 0 0;
+      }
+
+      .rightArea {
+        width: 48%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 281px);
+        grid-template-rows: repeat(2, 91px);
+        gap: 9px;
+
+        .gameBlock {
+          width: 282px;
+          height: 90px;
+          @include gameBlockS;
+
+
+          .dashBoard {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            @include dashcircle_small;
+          }
+        }
+      }
+
+      .gameBlock {
+        @include gameBlock;
+
+        &.big {
+            width: 608px;
+            height: 190px;
+            padding: 5%;
+
+          // 儀表板
+        .dashBoard {
+            width: 30%;
+            height: 120%;
+            margin: 0 45px 0 0;
+
+            @include dashcircle_big;
+          }
+  
+          //賽事細項
+          .gameDetail {
+            display: flex;
+            margin: 0;
+  
+            .team {
+              margin: 0;
+              position: relative;
+
+              .teamLogo {
+                width: 74px;
+                height: 51px;
+                margin: 0 0 16px 0;
+              }
+
+              .teamName {
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+  
+                span {
+                  color: $team_span;
+                }
+              }
+            }
+          }
+          .detail {
+            color: $gameBlock_font2;
+            margin: 0 10px;
+  
+            .time {
+              position: relative;
+              font-size: 16px;
+              top: 21px;
+              left: 0;
+  
+              .date {
+                margin: 0 0 5px;
+              }
+            }
+  
+            .main {
+              color: $gameBlock_font1;
+              font-size: 25px;
+              font-weight: bold;
+              margin: 52px 10px 10px;
+              position: relative;
+            }
+          }
+        }
+
+        .dashBoard {
+          width: 30%;
+          height: 30%;
+
+          .total {
+            color: $gameBlock_font2;
+            font-size: 12px;
+          }
+
+          .num {
+            color: $gameBlock_font1;
+            font-size: 15px;
+            font-weight: bold;
+          }
+        }
+
+        //賽事細項
+        .gameDetail {
+          display: flex;
+          margin: 0 15px 0 0;
+          position: relative;
+
+          .team {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: -32px 0 0 -27px;
+
+            .teamLogo {
+              width: 45px;
+              height: 31px;
+              margin: 0 0 6px 0;
+
+              &.second {
+                background-position-x: 100%;
+              }
+            }
+            .teamName {
+              font-size: 12px;
+              font-weight: bold;
+              text-align: center;
+
+              span {
+                color: $team_span;
+              }
+            }
+
+            &.t1 {
+              position: absolute;
+              top: 33px;
+              left: -10px;
+            }
+          }
+        }
+        .detail {
+          color: $gameBlock_font2;
+          margin: 10px 15px 0 0;
+          position: relative;
+
+          .time {
+            font-size: 12px;
+            white-space: nowrap;
+            position: absolute;
+            top: -6px;
+            left: 8px;
+
+            .date {
+              margin: 0 0 3px;
+            }
+          }
+
+          .main {
+            color: $gameBlock_font1;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 28px 0 10px 0;
+          }
+        }
+
+        &.login {
+          cursor: pointer;
+
+          &:hover,&:active,&.active {
+
+            &.big {
+              animation: change 1s ease-out infinite;
+
+              @keyframes change {
+
+                0% {
+                  background-position-y: 0;
+                }
+                50% {
+                  background-position-y: 50%;
+                }
+                100% {
+                  background-position-y: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+
+        &.total {
+          font-size: 16px;
+          margin: 0 0 5px;
+        }
+
+        &.num {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        &.info {
+          font-size: 12px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

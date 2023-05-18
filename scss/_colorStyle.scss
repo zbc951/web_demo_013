@@ -1,0 +1,522 @@
+//header
+$header_BG: #252525;
+$header_font: #979797;
+$header_font2: #ffffff;
+$nav_font_HOV: #ffffff;
+$nav_BG_HOV: #363636;
+$nav_BG_border: #d22442;
+$logArea_border: #363636;
+$header_remind: #d22442;
+$message_remind: #ff002b;
+
+
+//登入
+@mixin loginBtn {
+    background: linear-gradient(to right, #ff3f3f 0%, #e70057 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid #c80008;
+
+  &:hover,&:active,&.active {
+    background: linear-gradient(to left, #ff3f3f 0%, #e70057 100%);
+  }
+}
+//註冊
+@mixin signupBtn {
+
+    background: linear-gradient(to right, #9ab4c9 0%, #527799 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid #296396;
+  &:hover,&:active,&.active {
+    background: linear-gradient(to left, #9ab4c9 0%, #527799 100%);
+  }
+}
+
+//ad
+$announce_font: #fff799;
+$sportCardInfoBg: #000000b4;
+$sportCardInfo_font: #ffffff;
+$betBlock_font_Big: #ffffff;
+$textShadow_light: #ffffffb7;
+$sideBtn_Bg: #ffffffb7;
+$sideBtn_font: #7f97acd1;
+
+@mixin sportCard {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+//marquee
+$mq_BG: #ffffff;
+$mq_Word: #5f7892;
+
+//btnArea
+$btn_font: #ffffff;
+
+//bottom
+$scrollbar_thumb: #ffffff;
+$scrollbar_track: #7893ab;
+$hotgame_tit: #ffffff;
+$gameBlock_font1: #252525;
+$gameBlock_font2: #7a7a7a;
+$team_span: #5f7892;
+
+@mixin gameBlock {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5%;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+      
+      .lTriangle {
+        width: 49px;
+        height: 94px;
+        background: linear-gradient(to bottom, #d5d5d5 0%, #ffffff 57%);
+        transform: rotate(45deg);
+        position: absolute;
+        top: -36px;
+        left: -10px;
+        z-index: 5;
+      }
+
+      .rTriangle {
+        width: 49px;
+        height: 94px;
+        background: linear-gradient(to bottom, #d5d5d5 0%, #ffffff 57%);
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: -36px;
+        right: -10px;
+        z-index: 5;
+      }
+
+      &::before {
+        content: "";
+        width: 13px;
+        height: 13px;
+        background: linear-gradient(to top, #bababa 0%, #e7e7e7 50%, #f2f2f2 100%);
+        border-radius: 10px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+      }
+
+      &::after {
+        content: "";
+        width: 13px;
+        height: 13px;
+        background: linear-gradient(to top, #bababa 0%, #e7e7e7 50%, #f2f2f2 100%);
+        border-radius: 10px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 10;
+      }
+    
+      .shine {
+        width: 186px;
+        height: 469px;
+        background: #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: -139px;
+        left: 155px;
+      }
+
+      .shine2 {
+        width: 186px;
+        height: 469px;
+        background: #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: -139px;
+        left: -500px;
+      }
+
+      &.login {
+        &:hover,&:active,&.active {
+          .shine {
+            animation: shine1 1s ease-in-out forwards;
+
+            @keyframes shine1 {
+              0% {
+                left: 155px;
+              }
+              100%{
+                left: 900px;
+              }
+            }
+          }
+          .shine2 {
+            animation: shine2 2s ease-in-out forwards;
+
+            @keyframes shine2 {
+              0% {
+                left: -500px;
+              }
+              100%{
+                left: 1000px;
+              }
+            }
+          }
+        }
+      }
+}
+@mixin gameBlockS {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+      
+      .lTriangle {
+        width: 49px;
+        height: 94px;
+        background: linear-gradient(to bottom, #d5d5d5 0%, #ffffff 57%);
+        transform: rotate(45deg);
+        position: absolute;
+        top: -32px;
+        left: -34px;
+        z-index: 5;
+      }
+
+      .rTriangle {
+        width: 49px;
+        height: 94px;
+        background: linear-gradient(to bottom, #d5d5d5 0%, #ffffff 57%);
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: -49px;
+        right: -18px;
+        z-index: 5;
+      }
+
+      &::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: linear-gradient(to top, #bababa 0%, #e7e7e7 50%, #f2f2f2 100%);
+        border-radius: 10px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: 10;
+      }
+
+      &::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: linear-gradient(to top, #bababa 0%, #e7e7e7 50%, #f2f2f2 100%);
+        border-radius: 10px;
+        position: absolute;
+        bottom:8px;
+        right: 8px;
+        z-index: 10;
+      }
+    
+      .shine {
+        width: 105px;
+        height: 469px;
+        background: #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: -139px;
+        left: 155px;
+      }
+      .shine2 {
+        width: 105px;
+        height: 469px;
+        background: #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: -139px;
+        left: -100px;
+        opacity: 1;
+      }
+
+      &.login {
+        &:hover,&:active,&.active {
+          .shine {
+            animation: shine1 2s ease-in-out forwards;
+
+            @keyframes shine1 {
+              0% {
+                opacity: 0;
+                left: 155px;
+              }
+              100%{
+                left: 900px;
+              }
+            }
+          }
+          .shine2 {
+            animation: shine2 2s ease-in-out forwards;
+
+            @keyframes shine2 {
+              0% {
+                opacity: 1;
+                left: -100px;
+              }
+              100%{
+                opacity: 1;
+                left: 155px;
+              }
+            }
+          }
+        }
+      }
+}
+
+//儀表板(大)
+@mixin dashcircle_big {
+    .circle03 {
+        width: 128px;
+        height: 128px;
+        display: flex;
+        border-radius: 70px;
+        background: linear-gradient(to top, #dedede 0%, #c8c8c8 100%);
+        box-shadow: inset 3px 3px 10px 3px rgb(18 9 16 / 10%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 43px;
+        left: 67px;
+
+        .circle02 {
+          width: 100%;
+          height: 100%;
+
+          svg {
+            width: 128px;
+            height: 128px;
+            position: relative;
+            top: -36px;
+            left: 5px;
+            transform: translate(-50%,-50%);
+            transform: rotate(-90deg);
+
+            circle {
+                fill: transparent;
+                stroke: #e82244;
+                stroke-width: 16px;
+                stroke-linecap: round;
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                animation: scrun 8s linear;
+                animation-fill-mode: forwards;
+                @keyframes scrun {
+                  100% {
+                    stroke-dashoffset: 0; 
+                  }
+                }
+            }
+          }
+      
+          .circle01 {
+            width: 128px;
+            height: 128px; 
+            background-image:
+            linear-gradient(199deg, transparent 50%, lightgray 50%),
+            linear-gradient(90deg, lightgray 50%, transparent 50%);
+            border-radius: 70px;  
+            position: absolute; 
+            top: -1.5px;
+            left: 0;
+
+            .textBox {
+              width: 100px;
+              height: 100px;
+              border-radius: 70px;
+              background: linear-gradient(to top, #f0f0f0 0%, #ffffff 50%);
+              box-shadow: 8px 8px 8px 8px rgb(69,69,69,10%);
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              top: 14px;
+              left: 14px;
+
+              .total {
+                font-size: 18px;
+              }
+
+              .num {
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }  
+}
+//儀錶板(小)
+@mixin dashcircle_small {
+    .circle03 {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        border-radius: 70px;
+        background:  linear-gradient(to top, #dedede 0%, #c8c8c8 100%);
+        box-shadow: inset 3px 3px 10px 3px rgb(18 9 16 / 10%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        left: 14px;
+
+        .circle02 {
+          width: 100%;
+          height: 100%;
+
+          svg {
+            width: 162px;
+            height: 133px;
+            position: relative;
+            top: -58px;
+            left: -64px;
+            transform: translate(-50%,-50%);
+            transform: rotate(-90deg);
+
+            circle {
+                fill: transparent;
+                stroke: #e82244;
+                stroke-width: 12px;
+                stroke-linecap: round;
+                stroke-dasharray: 500;
+                stroke-dashoffset: 500;
+                animation: scrun 8s linear;
+                animation-fill-mode: forwards;
+                @keyframes scrun {
+                  100% {
+                    stroke-dashoffset: 0; 
+                  }
+                }
+            }
+          }
+      
+          .circle01 {
+            width: 80px;
+            height: 81px; 
+            background-image:
+            linear-gradient(219deg, transparent 50%, lightgray 50%),
+            linear-gradient(90deg, lightgray 50%, transparent 50%);
+            border-radius: 50px;  
+            position: absolute; 
+            top: -1.5px;
+            left: 0;
+
+
+            .textBox {
+              width: 58px;
+              height: 58px;
+              border-radius: 70px;
+              background: linear-gradient(to top, #f0f0f0 0%, #ffffff 50%);
+              box-shadow: 8px 8px 8px 8px rgb(69,69,69,10%);
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              top: 12px;
+              left: 11px;
+            }
+          }
+        }
+      } 
+}
+
+//懸浮按鈕
+$asideBtn_BG: linear-gradient(to right, #ff4646 0%, #a3003d 100%);
+$asideBtn_HOV_BG: linear-gradient(to left, #ff4646 0%, #a3003d 100%);
+$aside_Border: #fa4246;
+
+//footer
+$footer_BG: #252525;
+$footer_font: #979797;
+$footer_font_Hov: #ffffff;
+$footer_Border: #979797;
+
+//filter
+$filter: #0000009e;
+
+//jumpWindow
+$jumpWindow_BG: #ffffff;
+$jumpWindow_titBG: #69839a;
+$jumpWindow_formBG: #e2e2e2;
+$jumpWindow_noticeBG: #d22442;
+$jumpWindow_titFont: #ffffff;
+$jumpWindow_showMore_TitleFont: #252525;
+$jumpWindow_showMore_dateFont: #868686;
+$jumpWindow_contentFont: #252525;
+$jumpWindow_contentFont: #252525;
+$jumpWindow_outBorder: #ffffff;
+$jumpWindow_Border: #dcdcdc;
+$jumpWindow_formBorder: #bfbfbf;
+$jumpWindow_HintText: #868686;
+$jumpWindow_closeBtn_BG: #1e1e1ed4;
+$jumpWindow_closeBtn: #ffffff;
+$jumpWindow_signUp_Btn: #69839a;
+$jumpWindow_logIn_Btn: #d22442;
+$jumpWindow_delete_Btn: #d22442;
+
+@mixin jumpWindowInput {
+    width: 219px;
+    height: 34px;
+    border-radius: 6px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border: 1px solid $jumpWindow_titBG;
+}
+
+@mixin jumpWindowBtn {
+    width: 90px;
+    height: 35px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px 0 0;
+
+     &:hover,&:active,&.active {
+        filter: brightness(1.1);
+        box-shadow: 0px 0px 5px rgb(18 9 16 / 20%);
+     }
+}
+
+@mixin jumpWindowSignUpBtn {
+    width: 185px;
+    height: 46px;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  linear-gradient(to right, #ff3f3f 0%, #e70057 100%);
+
+    &:hover,&:active,&.active {
+     background: linear-gradient(to left, #ff3f3f 0%, #e70057 100%);
+      filter: brightness(1.1);
+      box-shadow: 0px 0px 5px rgb(18 9 16 / 20%);
+     }
+}

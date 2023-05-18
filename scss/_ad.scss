@@ -1,0 +1,263 @@
+.ad {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  .cardBox {
+    max-width: 1200px;
+    min-width: 1196px;
+    height: auto;
+    padding: 85px 0 0;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    button {
+      width: 50px;
+      height: 50px;
+      background: $sideBtn_Bg;
+      border-radius: 50px;
+      color: $sideBtn_font;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.prev {
+        margin-right: 10px;
+      }
+
+      .arrowIc {
+        width: 16px;
+        height: 25px;
+
+        &.right {
+          background-position-x: 100%;
+        }
+      }
+    }
+
+    .mutltiple-item {
+      width: 1200px;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        width: auto;
+        height: 321px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        justify-content: flex-end;
+        position: relative;
+
+        .betBlock {
+          width: 96px;
+          height: 101px;
+          color: $betBlock_font_Big;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin: auto;
+          position: absolute;
+          top: -1px;
+          right: -6px;
+
+          .type {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 10px;
+          }
+
+          .counter {
+            font-size: 50px;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+              sans-serif;
+            text-shadow: 0 0 10px $textShadow_light;
+            margin: 0 0 10px;
+          }
+
+          .announce {
+            color: $announce_font;
+            font-size: 12px;
+          }
+        }
+
+        .sportCard {
+          width: 100%;
+          height: 155px;
+          @include sportCard;
+          position: relative;
+
+          .athlete {
+            width: 216px;
+            height: 231px;
+            border-radius: inherit;
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            animation: show 1s 1s ease-in-out forwards;
+
+            @keyframes show {
+              0% {
+                opacity: 0;
+                left: -10px;
+              }
+
+              100% {
+                opacity: 1;
+                left: 0;
+              }
+            }
+          }
+
+          .gameInfo {
+            width: 100%;
+            height: 40px;
+            background: $sportCardInfoBg;
+            color: $sportCardInfo_font;
+            border-radius: 0 0 10px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 11px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+
+            .textLine {
+              width: 100%;
+              height: auto;
+              display: flex;
+              justify-content: space-between;
+              margin: 0 0 10px;
+
+              span {
+                display: none;
+                white-space: nowrap;
+                font-size: 11px;
+              }
+            }
+          }
+
+          &.football {
+            background-position-x: 0%;
+            .athlete {
+              background-position-x: 0%;
+            }
+          }
+
+          &.basketball {
+            background-position-x: 25%;
+            .athlete {
+              width: 219px;
+              background-position-x: 25%;
+            }
+          }
+
+          &.gaming {
+            background-position-x: 50.2%;
+            .athlete {
+              background-position-x: 50.5%;
+            }
+          }
+
+          &.tennis {
+            background-position-x: 75.1%;
+            .athlete {
+              background-position-x: 75%;
+            }
+          }
+
+          &.snooker {
+            background-position-x: 100%;
+            .athlete {
+              background-position-x: 100.5%;
+            }
+          }
+        }
+
+        .shadow {
+          width: 235px;
+          height: 39px;
+        }
+
+        &.login {
+          cursor: pointer;
+
+          &:hover,
+          &:active,
+          &.active {
+            .athlete {
+              filter: drop-shadow(5px -5px 5px rgba(0, 0, 0, 0.4));
+              transition: 0.1s;
+            }
+            .gameInfo {
+              height: 70px;
+
+              .textLine {
+                span {
+                  display: flex;
+                  margin: 15px 0 0;
+                  transition: 3s ease-out;
+                }
+
+                p {
+                  text-shadow: $textShadow_light;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .slick-arrow {
+        z-index: 1;
+        width: 52px;
+        height: 52px;
+        box-shadow: -1px -2px 8px  rgb(69,69,69,30%);
+
+        &:hover,
+        &:active,
+        &.active {
+          opacity: 1;
+        }
+
+        &::before {
+          display: none;
+        }
+
+        &.slick-prev {
+          top: 65%;
+          left: -55px;
+
+          &::after {
+            content: "";
+            width: 16px;
+            height: 25px;
+            position: absolute;
+            top: 29%;
+            left: 30%;
+          }
+        }
+
+        &.slick-next {
+          top: 57%;
+          right: -55px;
+          transform: scaleX(-1);
+
+          &::after {
+            content: "";
+            width: 16px;
+            height: 25px;
+            position: absolute;
+            top: 29%;
+            left: 30%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+//header
+header .logInArea .logInLine {
+    background: url(../img/logInLine_icon.png) no-repeat;
+    background-size: 300%;
+}
+
+//ad
+.ad .slick-arrow.slick-prev::after,
+.ad .slick-arrow.slick-next::after {
+    background: url(../img/adBtn.png)no-repeat;
+    background-size: 200%;
+}
+.ad .sportCard {
+    background: url(../img/cardBG.png) no-repeat;
+    background-size: 500%;
+}
+.ad .athlete {
+    background: url(../img/sidePic.png) no-repeat;
+    background-size: 500%;
+}
+
+.ad .shadow {
+    background: url(../img/shadow03.png) no-repeat center;
+    background-size: contain;
+}
+
+//marquee
+.marquee .mqIcon {
+    background: url(../img/marquee_icon.png) no-repeat center;
+    background-size: 100%;
+}
+
+//btnArea
+.btnArea button {
+    background: url(../img/btnBg.png) no-repeat center;
+    background-size: 100%;
+}
+
+.btnArea .icon {
+    background: url(../img/btnIcon.png)no-repeat;
+    background-size: 400%;
+}
+
+//deco
+.mainWrap .bottom .deco {
+    background: url(../img/deco.png)no-repeat center;
+}
+
+.human .soccerBall {
+    background: url(../img/light_soccer.png) no-repeat;
+    background-size: contain;
+}
+
+.human .group1 {
+    background: url(../img/group1.png) no-repeat;
+    background-size: contain;
+}
+
+.human .group2 {
+    background: url(../img/group2.png) no-repeat;
+    background-size: contain;
+}
+
+.human .group3 {
+    background: url(../img/group3.png) no-repeat;
+    background-size: contain;
+}
+
+.gameDetail .teamLogo {
+    background: url(../img/team.png) no-repeat;
+    background-size: 200%;
+}
+
+
+//asideBtn
+aside i {
+    background: url(../img/asideBtn.png)no-repeat center;
+    background-size: 200%;
+}
+
+
+//BG
+main {
+    background: url(../img/bgAll.png) no-repeat center;
+    background-size: cover;
+}
+
+//jumpWindow
+.jumpWindow.unLogIn .unloginIc {
+    background: url(../img/unlogin_icon.png)no-repeat center;
+    background-size: contain;
+}
+
+.jumpWindow.applySuccess .success_Ic {
+    background: url(../img/success_ic.png) no-repeat center;
+    background-size: contain;
+}
+
+.jumpWindow.showMore .back {
+    background: url(../img/back_icon.png) no-repeat;
+    background-size: contain;
+}
+
+.jumpWindow.showMore .content {
+    background: url(../img/jpWcontentBG.png) no-repeat;
+    background-size: cover;
+}

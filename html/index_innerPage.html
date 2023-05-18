@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/js.jsx"></script>
+    <!-- <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon"> -->
+  </head>
+  <body>
+    <header>
+      <div class="center">
+        <div class="mainArea login">
+          <div class="logo">
+            <a href="#">
+              <img class="logo" src="../img/LOGO.png" />
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li class="active">
+                <a href="#">
+                  <p>首頁</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>市場列表</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>最新注單</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>歷史帳務</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>賽事結果</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>規則說明</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>幫助中心</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="logInArea">
+          <div class="topLine">
+            <i class="logInLine message"></i>
+            <i class="logInLine member"></i>
+            <p class="memberId">user123456</p>
+            <button class="logout" onclick="window.location='../index.html'">登出</button>
+          </div>
+          <div class="bottom">
+            <i class="logInLine wallet"></i>
+            <p class="money">NT$<span>0.00</span></p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="ad">
+        <div class="cardBox">
+          <ul class="mutltiple-item">
+            <li class="sportType login">
+              <div class="betBlock">
+                <p class="type">足球</p>
+                <div class="counter" data-target="95"></div>
+                <p class="announce">-可投注項-</p>
+              </div>
+              <div class="sportCard">
+                <i class="athlete"></i>
+                <div class="gameInfo">
+                  <div class="textLine">
+                    <span>2020-02-06&nbsp;|&nbsp;03:45</span>
+                    <span>义大利甲组联赛</span>
+                  </div>
+                  <p class="competition">拉素[主] VS 维罗纳</p>
+                </div>
+              </div>
+              <div class="shadow sh1"></div>
+            </li>
+            <li class="sportType login">
+              <div class="betBlock">
+                <p class="type">籃球</p>
+                <div class="counter" data-target="54"></div>
+                <p class="announce">-可投注項-</p>
+              </div>
+              <div class="sportCard basketball">
+                <i class="athlete"></i>
+                <div class="gameInfo">
+                  <div class="textLine">
+                    <span>2020-02-06&nbsp;|&nbsp;03:45</span>
+                    <span>义大利甲组联赛</span>
+                  </div>
+                  <p class="competition">拉素[主] VS 维罗纳</p>
+                </div>
+              </div>
+              <div class="shadow sh2"></div>
+            </li>
+            <li class="sportType login">
+              <div class="betBlock">
+                <p class="type">電競</p>
+                <div class="counter" data-target="6"></div>
+                <p class="announce">-可投注項-</p>
+              </div>
+              <div class="sportCard gaming">
+                <i class="athlete"></i>
+                <div class="gameInfo">
+                  <div class="textLine">
+                    <span>2020-02-06&nbsp;|&nbsp;03:45</span>
+                    <span>义大利甲组联赛</span>
+                  </div>
+                  <p class="competition">拉素[主] VS 维罗纳</p>
+                </div>
+              </div>
+              <div class="shadow sh3"></div>
+            </li>
+            <li class="sportType login">
+              <div class="betBlock">
+                <p class="type">網球</p>
+                <div class="counter" data-target="34"></div>
+                <p class="announce">-可投注項-</p>
+              </div>
+              <div class="sportCard tennis">
+                <i class="athlete"></i>
+              <div class="gameInfo">
+                <div class="textLine">
+                  <span>2020-02-06&nbsp;|&nbsp;03:45</span>
+                  <span>义大利甲组联赛</span>
+                </div>
+                <p class="competition">拉素[主] VS 维罗纳</p>
+              </div>
+              </div>
+              <div class="shadow sh4"></div>
+            </li>
+            <li class="sportType login">
+              <div class="betBlock">
+                <p class="type">斯諾克</p>
+                <p class="counter">9</p>
+                <p class="announce">-可投注項-</p>
+              </div>
+              <div class="sportCard snooker">
+                <i class="athlete"></i>
+              <div class="gameInfo">
+                <div class="textLine">
+                  <span>2020-02-06&nbsp;|&nbsp;03:45</span>
+                  <span>义大利甲组联赛</span>
+                </div>
+                <p class="competition">拉素[主] VS 维罗纳</p>
+              </div>
+              </div>
+              <div class="shadow sh5"></div>
+            </li>
+            <li class="sportType login">
+              <div class="betBlock">
+                <p class="type">斯諾克</p>
+                <p class="counter" data-target="9"></p>
+                <p class="announce">-可投注項-</p>
+              </div>
+              <div class="sportCard snooker">
+                <i class="athlete"></i>
+              <div class="gameInfo">
+                <div class="textLine">
+                  <span>2020-02-06&nbsp;|&nbsp;03:45</span>
+                  <span>义大利甲组联赛</span>
+                </div>
+                <p class="competition">拉素[主] VS 维罗纳</p>
+              </div>
+              </div>
+              <div class="shadow sh5"></div>
+            </li>
+            <li class="sportType login">
+              <div class="betBlock">
+                <p class="type">斯諾克</p>
+                <p class="counter">9</p>
+                <p class="announce">-可投注項-</p>
+              </div>
+              <div class="sportCard snooker">
+                <i class="athlete"></i>
+              <div class="gameInfo">
+                <div class="textLine">
+                  <span>2020-02-06&nbsp;|&nbsp;03:45</span>
+                  <span>义大利甲组联赛</span>
+                </div>
+                <p class="competition">拉素[主] VS 维罗纳</p>
+              </div>
+              </div>
+              <div class="shadow sh5"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="center">
+        <div class="mainWrap">
+          <div class="top">
+            <div class="marquee">
+              <i class="mqIcon"></i>
+              <div class="textBox">
+                <p class="content">
+                  公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告
+                </p>
+              </div>
+            </div>
+            <div class="btnArea">
+              <button class="login">
+                <i class="icon point"></i>
+                <p>即时比分</p>
+              </button>
+              <button class="login">
+                <i class="icon deposit"></i>
+                <p>存&nbsp;&nbsp;&nbsp;&nbsp;款</p>
+              </button>
+              <button class="login">
+                <i class="icon transfer"></i>
+                <p>轉&nbsp;&nbsp;&nbsp;&nbsp;帳</p>
+              </button>
+              <button class="login">
+                <i class="icon discount"></i>
+                <p>优&nbsp;&nbsp;&nbsp;&nbsp;惠</p>
+              </button>
+            </div>
+          </div>
+          <div class="bottom">
+            <!-- 裝飾條 -->
+            <div class="deco">
+              <p class="hotgame">热门赛事</p>
+            </div>
+            <div class="human">
+              <div class="soccerBall"></div>
+              <div class="group1"></div>
+              <div class="group2"></div>
+              <div class="group3"></div>
+            </div>
+            <div class="gameWrap">
+              <!-- 左側 -->
+              <div class="leftArea">
+                <div class="gameBlock big login">
+                  <i class="lTriangle"></i>
+                  <i class="rTriangle"></i>
+                  <i class="shine"></i>
+                  <i class="shine2"></i>
+                  <!-- 儀錶板 -->
+                  <div class="dashBoard">
+                    <div class="circle03">
+                      <div class="circle02">
+                        <svg>
+                          <circle cx="30" cy="60" r="55"></circle>
+                        </svg>
+                        <div class="circle01">
+                          <div class="textBox">
+                            <p class="total">總成交量</p>
+                            <p class="num">8953<span>K</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 賽事細項 -->
+                  <div class="gameDetail">
+                    <div class="team">
+                      <i class="teamLogo"></i>
+                      <p class="teamName">拉素<span>[主]</span></p>
+                    </div>
+                    <div class="detail">
+                      <div class="time">
+                        <p class="date">2020-02-06</p>
+                        <p>03:45</p>
+                      </div>
+                      <p class="main">VS</p>
+                      <p class="info">义大利甲组联赛</p>
+                    </div>
+                    <div class="team">
+                      <i class="teamLogo second"></i>
+                      <p class="teamName">维罗纳</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 右側 -->
+              <div class="rightArea">
+                <div class="gameBlock login">
+                  <i class="lTriangle"></i>
+                  <i class="rTriangle"></i>
+                  <i class="shine"></i>
+                  <i class="shine2"></i>
+                  <!-- 儀錶板 -->
+                  <div class="dashBoard">
+                    <div class="circle03">
+                      <div class="circle02">
+                        <svg>
+                          <circle cx="50" cy="90" r="34"></circle>
+                        </svg>
+                        <div class="circle01">
+                          <div class="textBox">
+                            <p class="total">總成交量</p>
+                            <p class="num">8953<span>K</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 賽事細項 -->
+                  <div class="gameDetail">
+                    <div class="team t1">
+                      <i class="teamLogo"></i>
+                      <p class="teamName">拉素<span>[主]</span></p>
+                    </div>
+                    <div class="detail">
+                      <div class="time">
+                        <p class="date">2020-02-06</p>
+                        <p>03:45</p>
+                      </div>
+                      <p class="main">VS</p>
+                      <p class="info">义大利甲组联赛</p>
+                    </div>
+                    <div class="team">
+                      <i class="teamLogo second"></i>
+                      <p class="teamName">维罗纳</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="gameBlock login">
+                  <i class="lTriangle"></i>
+                  <i class="rTriangle"></i>
+                  <i class="shine"></i>
+                  <i class="shine2"></i>
+                  <!-- 儀錶板 -->
+                  <div class="dashBoard">
+                    <div class="circle03">
+                      <div class="circle02">
+                        <svg>
+                          <circle cx="50" cy="90" r="34"></circle>
+                        </svg>
+                        <div class="circle01">
+                          <div class="textBox">
+                            <p class="total">總成交量</p>
+                            <p class="num">8953<span>K</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 賽事細項 -->
+                  <div class="gameDetail">
+                    <div class="team t1">
+                      <i class="teamLogo"></i>
+                      <p class="teamName">拉素<span>[主]</span></p>
+                    </div>
+                    <div class="detail">
+                      <div class="time">
+                        <p class="date">2020-02-06</p>
+                        <p>03:45</p>
+                      </div>
+                      <p class="main">VS</p>
+                      <p class="info">义大利甲组联赛</p>
+                    </div>
+                    <div class="team">
+                      <i class="teamLogo second"></i>
+                      <p class="teamName">维罗纳</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="gameBlock login">
+                  <i class="lTriangle"></i>
+                  <i class="rTriangle"></i>
+                  <i class="shine"></i>
+                  <i class="shine2"></i>
+                  <!-- 儀錶板 -->
+                  <div class="dashBoard">
+                    <div class="circle03">
+                      <div class="circle02">
+                        <svg>
+                          <circle cx="50" cy="90" r="34"></circle>
+                        </svg>
+                        <div class="circle01">
+                          <div class="textBox">
+                            <p class="total">總成交量</p>
+                            <p class="num">8953<span>K</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 賽事細項 -->
+                  <div class="gameDetail">
+                    <div class="team t1">
+                      <i class="teamLogo"></i>
+                      <p class="teamName">拉素<span>[主]</span></p>
+                    </div>
+                    <div class="detail">
+                      <div class="time">
+                        <p class="date">2020-02-06</p>
+                        <p>03:45</p>
+                      </div>
+                      <p class="main">VS</p>
+                      <p class="info">义大利甲组联赛</p>
+                    </div>
+                    <div class="team">
+                      <i class="teamLogo second"></i>
+                      <p class="teamName">维罗纳</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="gameBlock login">
+                  <i class="lTriangle"></i>
+                  <i class="rTriangle"></i>
+                  <i class="shine"></i>
+                  <i class="shine2"></i>
+                  <!-- 儀錶板 -->
+                  <div class="dashBoard">
+                      <div class="circle03">
+                        <div class="circle02">
+                          <svg>
+                            <circle cx="50" cy="90" r="34"></circle>
+                          </svg>
+                          <div class="circle01">
+                            <div class="textBox">
+                              <p class="total">總成交量</p>
+                              <p class="num">8953<span>K</span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <!-- 賽事細項 -->
+                  <div class="gameDetail">
+                    <div class="team t1">
+                      <i class="teamLogo"></i>
+                      <p class="teamName">拉素<span>[主]</span></p>
+                    </div>
+                    <div class="detail">
+                      <div class="time">
+                        <p class="date">2020-02-06</p>
+                        <p>03:45</p>
+                      </div>
+                      <p class="main">VS</p>
+                      <p class="info">义大利甲组联赛</p>
+                    </div>
+                    <div class="team">
+                      <i class="teamLogo second"></i>
+                      <p class="teamName">维罗纳</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <aside>
+      <div class="rightBtn">
+        <button class="cs">
+          <i class="cs"></i>
+        </button>
+        <button class="app">
+          <i class="app"></i>
+        </button>
+      </div>
+    </aside>
+    <footer>
+      <ul>
+        <li>
+          <a href="#">竞猜责任</a>
+        </li>
+        <li>
+          <a href="#">隐私保护</a>
+        </li>
+        <li>
+          <a href="#">规则说明</a>
+        </li>
+        <li>
+          <a href="#">帮助中心</a>
+        </li>
+        <li>
+          <a href="#">联络客服</a>
+        </li>
+      </ul>
+      <p class="copyright">Copyright © 2020 STG Inc. All rights reserved</p>
+    </footer>
+    <!-- 彈窗 -->
+    <div class="filter display">
+      <!-- 公告 -->
+      <div class="jumpWindow notice display">
+        <div class="title">
+          <p>公告標題</p>
+          <button class="close">✕</button>
+        </div>
+        <div class="content">
+          <div class="top">
+            <p>公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容公告內容</p>
+          </div>
+          <div class="bottom">
+            <button class="showAll">查看全部</button>
+          </div>
+        </div>
+      </div>
+      <!-- 查看公告 -->
+      <div class="jumpWindow showMore">
+        <div class="title">
+          <i class="back"></i>
+          通知詳情
+          <button class="close">✕</button>
+        </div>
+        <div class="topicArea">
+          <p class="mainTitle">通知標題</p>
+          <p class="date">2020-02-05<span class="time">10:33:14</span></p>
+        </div>
+        <div class="content">
+          <p>通知內容通知內容通知內容通知內容通知內容通知內容通知內容通知內容通知內容通知內通知內容通知
+            內容通知內容通知內容通知內容通知內容通知內容通知內容通知內容通知內容通知內容通知內容通知內
+            容通知內容通知內容通知內容通知內容通知內容</p>
+        </div>
+        <div class="bottom">
+          <button class="delete">刪除</button>
+        </div>
+    </div>
+  </body>
+</html>
